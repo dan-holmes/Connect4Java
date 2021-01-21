@@ -13,6 +13,10 @@ public class Board {
 		pieces[column][0] = player;
 	}
 	
+	public int[][] getPieces() {
+		return pieces;
+	}
+	
 	public void render() {
 		for(int j = 0; j < ROWS; j++) {
 			for(int i = 0; i < COLUMNS; i++) {
