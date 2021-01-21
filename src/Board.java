@@ -9,8 +9,14 @@ public class Board {
 		pieces = new int[7][6];
 	}
 	
-	public void addPiece(int column, int player) {
-		pieces[column][0] = player;
+	public void addPiece(int column, int player) throws Exception {
+		for(int row = 0; row < pieces[column].length; row++) {
+			if(pieces[column][row] == 0) {
+				pieces[column][row] = player;
+				return;
+			}
+		}
+		throw new Exception("Column is full");
 	}
 	
 	public int[][] getPieces() {
