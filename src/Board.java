@@ -1,7 +1,7 @@
 
 public class Board {
-	private static final int COLUMNS = 7;
-	private static final int ROWS = 6;
+	public static final int COLUMNS = 7;
+	public static final int ROWS = 6;
 	
 	int[][] pieces;
 	
@@ -10,7 +10,7 @@ public class Board {
 	}
 	
 	public void addPiece(int column, int player) throws Exception {
-		for(int row = 0; row < pieces[column].length; row++) {
+		for(int row = 0; row < ROWS; row++) {
 			if(pieces[column][row] == 0) {
 				pieces[column][row] = player;
 				return;

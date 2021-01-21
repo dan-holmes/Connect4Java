@@ -13,6 +13,6 @@ class Connect4 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		board.render();
+		Printer.printBoard(board);
 	}
 }
